@@ -32,21 +32,23 @@ Therefore, it is better to select a neuron number between (Not high, not low) wh
 
 **PART 2 - TWO HIDDEN LAYER NN**
 
-
-![6](https://user-images.githubusercontent.com/48417171/76670890-16d01900-65a4-11ea-9d77-14de73cf8883.png)
 **Figure 5**
+![6](https://user-images.githubusercontent.com/48417171/76670890-16d01900-65a4-11ea-9d77-14de73cf8883.png)
 
-![7](https://user-images.githubusercontent.com/48417171/76670891-1768af80-65a4-11ea-966b-6342a693f9cb.png)
 **Figure 6**
+![7](https://user-images.githubusercontent.com/48417171/76670891-1768af80-65a4-11ea-966b-6342a693f9cb.png)
+
 
 For this part, I have trained a neural network with 2 hidden layers with 32 neurons each. The learning rate is equal to 0.2 and I have used 20 mini-batch for training.
 From the figure5 and figure6, we can see that the increasing hidden layer number does not give a huge performance boost. The test accuracy error is still close %25 which is close to 1 hidden layer network. However, if we look at the training test accuracy, we can see a difference between 1 and 2 hidden layer networks. 2 hidden layer network's training accuracy error is below %1 whereas the 1 hidden layered neural network's training accuracy error is close to %5. This happens because the model complexity of the 2 hidden layers is higher than one hidden layer, i.e. the 2 hidden layer learns the set more than the 1 hidden layer. Furthermore, learning a set this much is an example of overtraining. We can see it with the help of test set whereas although 2 hidden layered network gives better results in training error it cannot generalize and give same results with the one hidden layered network at the test errors. In this cat vs car scenario increasing the hidden layer number, therefore, does not help us much.
 Normally since the complexity of the 2 hidden layer network is higher than the complexity of the 1 hidden layer. I have expected to have more epochs to learn the set fully (converge). However, from figure5 and figure6, we can see that the 2 hidden layer network can learn the set faster than the 1 hidden layer setting parameters correctly. This happened because 2 hidden layer network does not work like the 1 hidden layer, i.e. 2 hidden layers can hold more information about the set than the 1 hidden layer set. An extra hidden layer may result in the network to achieve more information from the set at one iteration of training. Therefore 2 hidden layered networks may get faster to the local minimum than the 1 hidden layer networks as happened in my example.
 
-![8](https://user-images.githubusercontent.com/48417171/76670892-18014600-65a4-11ea-87f7-d74a23faf63a.png)
-**Figure 7**
 
-![9](https://user-images.githubusercontent.com/48417171/76670893-18014600-65a4-11ea-9b50-66ddb2f65966.png)
+**Figure 7**
+![8](https://user-images.githubusercontent.com/48417171/76670892-18014600-65a4-11ea-87f7-d74a23faf63a.png)
+
 **Figure 8**
+![9](https://user-images.githubusercontent.com/48417171/76670893-18014600-65a4-11ea-9b50-66ddb2f65966.png)
+
 
 I have trained the network in part d with a momentum of 0.2. If we compare figure7 and figure8 with figure 6 and figure 5 we can see that adding momentum result in increased learning speed. In this specific example the epoch number for converging reduced nearly 50 epochs. This happens because the adding momentum increases the magnitude of the gradient while going down the hill, i.e. when we are far from the local/global minimum. Also, when our network comes near to the local/global minimum adding momentum decreases the gradient and this new small gradient decreases the oscillations. Therefore, our network fits the local/global minimum faster that results in faster learning which we can also see by comparing figure5, figure6, figure7, and figure8.
