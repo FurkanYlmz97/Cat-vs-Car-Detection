@@ -20,12 +20,11 @@ As a learning rate, I have selected 0.2 since it has given better performance at
 
 For every epoch, the MSE and the accuracy error of the network overall decreases until a point of an epoch. At that point, the network stuck on a local minimum. Until the network stuck on a local minimum the MSE and the accuracy error does not decrease smoothly as we see in the gradient descent. This is because for this assignment I have used mini-batch gradient descent. Using small-batch gradient descent smooths and decreases the noise in the training whereas it has also allowed us to hinder the local minimums and give us a chance to reach the global minimum. From figure1 we can see that the error function does not always decrease but it fluctuates, i.e. the MSE value sometimes increases by noise which helps us to escape from the local minimum and reach the global minimum. After a point (epoch number) both the test and the train MSE and the accuracy errors do not change. This is the point where the network cannot learn more from that train set. This is an overtraining example because although the train errors decrease the test errors do not decrease after a point. At the point where the test error does not decrease (but the train test continues to decrease), we can say that the network is generalized and more training will result in the overtraining which will increase the test error a little bit more.
 
-
-![4](https://user-images.githubusercontent.com/48417171/76670832-ceb0f680-65a3-11ea-89d5-c51958575ea9.png)
 **Figure 3**
+![4](https://user-images.githubusercontent.com/48417171/76670832-ceb0f680-65a3-11ea-89d5-c51958575ea9.png)
 
-![5](https://user-images.githubusercontent.com/48417171/76670833-cfe22380-65a3-11ea-88b1-4741f76db9e8.png)
 **Figure 4**
+![5](https://user-images.githubusercontent.com/48417171/76670833-cfe22380-65a3-11ea-88b1-4741f76db9e8.png)
 
 From the figures it can be seen that increasing neuron numbers can decrease the test MSE and the accuracy error. However, training a high number of neuron numbers need more epoch than the low number neurons, i.e. with more neurons it is needed to have more computational power and time. Increasing neuron numbers will increase the complexity of the network and therefore the network will learn more but also this learning will be slower because the number of weights that should be optimized has increased. On the other hand, a small number of neurons learn fast because there is a small number of weights to be optimized. However, also the complexity of the network is low and cannot learn lots of things at training as the high number neuron.
 Therefore, it is better to select a neuron number between (Not high, not low) which gives us an adequate low MSE value. So that we can achieve our goals and use time efficiently.
