@@ -11,9 +11,8 @@ By implementing this on python with 32 neuron one hidden layer NN the error accu
 **Figure 1**
 ![1](https://user-images.githubusercontent.com/48417171/76670768-5a765300-65a3-11ea-8927-f171c21e8657.png)
 
-
-![2](https://user-images.githubusercontent.com/48417171/76670778-66faab80-65a3-11ea-9cb6-5ce1850ab29e.png)
 **Figure2**
+![2](https://user-images.githubusercontent.com/48417171/76670778-66faab80-65a3-11ea-9cb6-5ce1850ab29e.png)
 
 Figure 1 and figure 2 are the outputs of the neural network that I have designed. For this neural network, the hyperbolic activation function has been implemented for all neurons. The performance has been tested with a different number of neurons in the hidden layer. Increasing hidden neuron number results with a lower MSE and accuracy test error. However, it also results in computational difficulty since more neuron means more weights to optimize i.e. more neuron means more epoch for learning. Therefore, as hidden layer neuron number 32 has been selected. With this number, I have achieved an accuracy error of % 5 in train and %25 in the test.
 For assigning weights I have tried several different gaussian distributions. It is important that the weights have been initialized with zero mean and small values so that the network’s activation function will not overflow and give us a reasonable answer. As a batch number, I have tried several different numbers and I have ended up with “20”. When the batch increases a lot, I have seen that the performance of the network in terms of generalizing decreases. This is because large batches tend to converge to local sharp minimizers. Also, when batch size decreases it gets close to the gradient descent which has more noise than the mini-batch gradient descent. Therefore, I have selected a mini-batch in the middle with a size of 20.
