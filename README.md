@@ -10,7 +10,6 @@ By implementing this on python with 32 neuron one hidden layer NN the error accu
 
 
 **Figure 1**
-
 ![1](https://user-images.githubusercontent.com/48417171/76670768-5a765300-65a3-11ea-8927-f171c21e8657.png)
 
 
