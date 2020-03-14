@@ -8,7 +8,7 @@ The gradient of the weights have been found as follows,
 
 By implementing this on python with 32 neuron one hidden layer NN the error accuracy and mse vs epoch numbers have been found as follows,
 
-**Figure 1**:
+**Figure 1**
 ![1](https://user-images.githubusercontent.com/48417171/76670768-5a765300-65a3-11ea-8927-f171c21e8657.png)
 
 **Figure2**
